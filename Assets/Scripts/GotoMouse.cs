@@ -5,7 +5,7 @@ using UnityEngine;
 public class GotoMouse : MonoBehaviour
 {
 
-    public float speed = 1.5f;
+    public float speed = 10f;
     private Vector3 target;
 
     void Start()
