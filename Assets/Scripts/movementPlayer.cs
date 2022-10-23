@@ -5,11 +5,11 @@ using UnityEngine;
 public class movementPlayer : MonoBehaviour
 {
 
-    [SerializeField] private float speed = 3f;
+    private float speed = 3f;
     private Rigidbody2D playeRb;
     private Animator Animator;
     private Vector2 moveInput;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +26,12 @@ public class movementPlayer : MonoBehaviour
         
         Animator.SetBool("Running", moveX != 0.0f);
         Animator.SetBool("Running", moveY != 0.0f);
+        
     }
 
     private void FixedUpdate()
     {
         playeRb.MovePosition(playeRb.position + moveInput * speed * Time.fixedDeltaTime);
     }
+    
 }
