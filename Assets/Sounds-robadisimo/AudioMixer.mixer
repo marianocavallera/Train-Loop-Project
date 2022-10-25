@@ -19,7 +19,7 @@ AudioMixerController:
   - guid: 8dca3a2a08c52cf4988ddb1583524165
     name: VolFX
   - guid: ba70b6335d52740479cc2d42c2014708
-    name: VolMaster
+    name: MasterVol
   m_AudioMixerGroupViews:
   - guids:
     - 5b2398fddfd56f84e828dbed942feddc
