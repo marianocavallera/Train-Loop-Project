@@ -22,6 +22,9 @@ public class movementPlayer : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
+
+        if(moveX < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        else if (moveX > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         moveInput = new Vector2(moveX, moveY).normalized;
         
         Animator.SetBool("Running", moveX != 0.0f);
