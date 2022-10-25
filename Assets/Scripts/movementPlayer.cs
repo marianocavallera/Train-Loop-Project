@@ -25,8 +25,14 @@ public class movementPlayer : MonoBehaviour
 
         if(moveX < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         else if (moveX > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
         moveInput = new Vector2(moveX, moveY).normalized;
         
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            Deslizar();
+        }
+
         Animator.SetBool("Running", moveX != 0.0f);
         Animator.SetBool("Running", moveY != 0.0f);
         
@@ -37,4 +43,7 @@ public class movementPlayer : MonoBehaviour
         playeRb.MovePosition(playeRb.position + moveInput * speed * Time.fixedDeltaTime);
     }
     
+    private void Deslizar(){
+        
+    }
 }
