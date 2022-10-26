@@ -15,6 +15,7 @@ public class MenuInicialCheto : MonoBehaviour
     [Header("Paneles")]
     public GameObject panelcheto;
     public GameObject opciones;
+    public GameObject seleccionarjug;
 
     private void Awake(){
         FXVol.onValueChanged.AddListener(CambiarVolFX);
@@ -24,6 +25,7 @@ public class MenuInicialCheto : MonoBehaviour
     public void OpenPanel(GameObject panel){
         panelcheto.SetActive(false);
         opciones.SetActive(false);
+        seleccionarjug.SetActive(false);
 
         panel.SetActive(true);
         PlaySoundButtom();
