@@ -8,6 +8,7 @@ public class MovimientoEnemigo : MonoBehaviour
     private float distancia;
     public float speedenemigo;
     public GameObject Jugador;
+    public float distanciaentre;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class MovimientoEnemigo : MonoBehaviour
 
         float angulo = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        if(distancia < 2){
+        if(distancia < distanciaentre){
             transform.position = Vector2.MoveTowards(this.transform.position, Jugador.transform.position, speedenemigo * Time.fixedDeltaTime);
             transform.rotation = Quaternion.Euler(Vector3.forward * angulo);
         }
