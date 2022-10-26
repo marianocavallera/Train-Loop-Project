@@ -689,6 +689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  BalaPrefab: {fileID: 8654727271050653743, guid: a9f021c9675b3b419ad46887f25b72c7, type: 3}
 --- !u!50 &887845599
 Rigidbody2D:
   serializedVersion: 4
@@ -954,6 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  BalaPrefab: {fileID: 0}
 --- !u!50 &1878929580
 Rigidbody2D:
   serializedVersion: 4
